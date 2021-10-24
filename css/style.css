@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+}
+
+header p {
+    padding-top: 10px;
+}
+
+main {
+    background-color: rgb(250, 246, 246);
+}
+
+.container {
+    width: 70%;
+    height: 550px;
+    margin-left: 15%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    width: 24%;
+    height: 175px;
+    border: 1px solid rgb(247, 244, 244);
+    margin-left: 7px;
+    margin-top: 3px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rampart One', cursive;
+    box-shadow: 0 0 5px 0px gray;
+    position: relative;
+    transform: scale(1);
+}
+
+.container .box:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;
+}
+
+.front-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: .3s;
+}
+
+.flip{
+    transform: rotateY(90deg);
+}
+
+.unVisible{
+    opacity: 0;
+}
